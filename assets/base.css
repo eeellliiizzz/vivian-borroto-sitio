@@ -9,6 +9,19 @@ body { margin: 0; background: #FBFCFD; }
 :focus-visible { outline: 2px solid #3D6E9E; outline-offset: 3px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
+/* Enlace para saltar al contenido: solo se ve al llegar a él con el teclado */
+.vb-salto { position: absolute; left: -999px; top: 0; z-index: 100; padding: 10px 16px; background: #3D6E9E; color: #fff; font: 600 15px 'Schibsted Grotesk', system-ui, sans-serif; border-radius: 0 0 10px 0; }
+.vb-salto:focus { left: 0; }
+#contenido { scroll-margin-top: 90px; }
+
+/* Respuesta al toque: sin retardo de doble pulsación ni destello gris, y los botones ceden un poco al pulsarlos */
+a, button { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+button:active, a.vb-tab:active, a.vb-idioma:active { transform: scale(.97); }
+@media (prefers-reduced-motion: reduce) { button:active, a.vb-tab:active, a.vb-idioma:active { transform: none; } }
+
+/* Pestañas e idiomas son enlaces: se centran como los botones que eran */
+a.vb-tab, a.vb-idioma { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; box-sizing: border-box; }
+
 /* Cabecera. Las clases vb-* las añade herramientas/genera.py sobre el diseño. */
 .vb-tabs { display: flex; align-items: center; gap: 6px; }
 
@@ -35,6 +48,10 @@ body { margin: 0; background: #FBFCFD; }
   .vb-portada { gap: 32px 40px !important; padding-top: 64px !important; padding-bottom: 64px !important; }
   .vb-portada-texto { flex-basis: 400px !important; }
 }
+
+/* Las columnas que ocupan dos huecos de la rejilla pasan a uno cuando no caben dos:
+   si no, la página se sale por la derecha y descoloca la barra inferior */
+@media (max-width: 800px) { .vb-doble { grid-column: auto !important; } }
 
 /* Móvil (hasta 760 px) */
 @media (max-width: 760px) {
