@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://vivianborroto.com/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivianborroto.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivianborroto.com/en/"/>
+  </url>
+  <url>
+    <loc>https://vivianborroto.com/en/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivianborroto.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivianborroto.com/en/"/>
+  </url>
+  <url>
+    <loc>https://vivianborroto.com/trayectoria/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivianborroto.com/trayectoria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivianborroto.com/en/career/"/>
+  </url>
+  <url>
+    <loc>https://vivianborroto.com/en/career/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivianborroto.com/trayectoria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivianborroto.com/en/career/"/>
+  </url>
+  <url>
+    <loc>https://vivianborroto.com/publicaciones/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivianborroto.com/publicaciones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivianborroto.com/en/publications/"/>
+  </url>
+  <url>
+    <loc>https://vivianborroto.com/en/publications/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivianborroto.com/publicaciones/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivianborroto.com/en/publications/"/>
+  </url>
+</urlset>
