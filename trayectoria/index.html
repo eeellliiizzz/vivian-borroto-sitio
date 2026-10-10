@@ -66,7 +66,7 @@
         <span data-dc-tpl="51" style="font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: rgb(61, 110, 158);"><span class="sc-interp">Trayectoria</span></span>
         <h1 data-dc-tpl="52" style="margin: 0px; font-family: &quot;Schibsted Grotesk&quot;, system-ui, sans-serif; letter-spacing: -0.02em; font-size: clamp(34px, 4vw, 46px); line-height: 1.15; font-weight: 500; color: rgb(31, 41, 51);"><span class="sc-interp">Tres décadas de práctica, docencia e investigación.</span></h1>
       </div>
-      <a data-dc-tpl="53" href="cv/Vivian-Borroto-CV.pdf" download="" class="scp4" style="display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0px 24px; border-radius: 999px; font-size: 16px; font-weight: 600; background: rgb(61, 110, 158); color: rgb(255, 255, 255); text-decoration: none;">↓ <span class="sc-interp">Descargar CV (PDF)</span></a>
+      <a data-dc-tpl="53" href="/cv/CV_Dra_Vivian_Borroto_2026_ES.pdf" download="" class="scp4" style="display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 0px 24px; border-radius: 999px; font-size: 16px; font-weight: 600; background: rgb(61, 110, 158); color: rgb(255, 255, 255); text-decoration: none;">↓ <span class="sc-interp">Descargar CV (PDF)</span></a>
     </div>
     <div data-dc-tpl="54" style="max-width: 1160px; margin: 0px auto; padding: 16px 28px 0px;">
       <div data-dc-tpl="55" style="display: flex; flex-wrap: wrap; gap: 1px; background: rgb(230, 235, 240); border: 1px solid rgb(230, 235, 240); border-radius: 18px; overflow: hidden;">
@@ -472,7 +472,7 @@ input,select,button{font-family:inherit}
         <span style="font-size:14px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#3D6E9E">{{ t.navCareer }}</span>
         <h1 style="margin:0;font-family:'Schibsted Grotesk',system-ui,sans-serif;letter-spacing:-0.02em;font-size:clamp(34px,4vw,46px);line-height:1.15;font-weight:500;color:#1F2933">{{ t.cvTitle }}</h1>
       </div>
-      <a href="cv/Vivian-Borroto-CV.pdf" download style="display:flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-size:16px;font-weight:600;background:#3D6E9E;color:#FFFFFF;text-decoration:none" style-hover="background:#2F5A84;color:#FFFFFF;text-decoration:none;box-shadow:0 6px 16px rgba(61,110,158,0.25)">↓ {{ t.cvDownload }}</a>
+      <a href="{{ cvHref }}" download style="display:flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font-size:16px;font-weight:600;background:#3D6E9E;color:#FFFFFF;text-decoration:none" style-hover="background:#2F5A84;color:#FFFFFF;text-decoration:none;box-shadow:0 6px 16px rgba(61,110,158,0.25)">↓ {{ t.cvDownload }}</a>
     </div>
     <div style="max-width:1160px;margin:0 auto;padding:16px 28px 0">
       <div style="display:flex;flex-wrap:wrap;gap:1px;background:#E6EBF0;border:1px solid #E6EBF0;border-radius:18px;overflow:hidden">
@@ -848,7 +848,7 @@ class Component extends DCLogic {
     return {
       t, go, heroPhoto, heroNoPhoto: !heroPhoto, toContact: this.toContact, contactRef: this.contactRef,
       isInicio: s.view === 'inicio', isTrayectoria: s.view === 'trayectoria', isBiblioteca: s.view === 'biblioteca',
-      mail: atob('ZHJhLnZpdmlhbmJvcnJvdG9AZ21haWwuY29t'), mailLink: 'mailto:' + atob('ZHJhLnZpdmlhbmJvcnJvdG9AZ21haWwuY29t'), legalHref: s.lang === 'es' ? '/legal/' : '/en/legal/',
+      mail: atob('ZHJhLnZpdmlhbmJvcnJvdG9AZ21haWwuY29t'), mailLink: 'mailto:' + atob('ZHJhLnZpdmlhbmJvcnJvdG9AZ21haWwuY29t'), cvHref: s.lang === 'es' ? '/cv/CV_Dra_Vivian_Borroto_2026_ES.pdf' : '/cv/CV_Dr_Vivian_Borroto_2026_EN.pdf', legalHref: s.lang === 'es' ? '/legal/' : '/en/legal/',
       nav: views.map(([v, label]) => { const on = s.view === v; return { label, onClick: go[v], current: on ? 'page' : undefined, weight: on ? 600 : 500, bg: on ? '#EEF3F8' : 'transparent', color: on ? '#2F5A84' : '#46525C' }; }),
       langs: ['es', 'en'].map(l => ({ label: l.toUpperCase(), bg: s.lang === l ? '#EEF3F8' : 'transparent', fg: s.lang === l ? '#2F5A84' : '#6B7680', onClick: () => this.setState({ lang: l }) })),
       services: d.services, stats: d.stats, profile: d.profile, affiliations: d.affiliations, books: d.books,
